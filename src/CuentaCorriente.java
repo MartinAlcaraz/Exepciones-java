@@ -5,6 +5,11 @@ public class CuentaCorriente extends Cuenta implements Tributacion {
 		super(numero, saldo);
 	}
 
+	/**
+	 * Al retirar dinero de esta cuenta se cobra 20 por el retiro, asi que si 
+	 * hay saldo suficiente para el retiro + los 20, no se puede retirar el dinero
+	 * @author Martin
+	 */
 	@Override
 	public void retirar(double valor) throws SaldoInsuficienteException{
 		double valorAretirar = valor + 20;

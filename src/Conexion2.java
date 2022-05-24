@@ -14,7 +14,7 @@ public class Conexion2 implements AutoCloseable{
             System.out.println("Cerrando conexión ");
         }
 
-        // este metodo pertenece a la interface AutoCloseable
+        // este metodo close() pertenece a la interface AutoCloseable
         // se ejecuta cuande se sale del bloque try-with-resource
         public void close() {
         	System.out.println("se ejecuta el metodo close() de AutoCloseable");

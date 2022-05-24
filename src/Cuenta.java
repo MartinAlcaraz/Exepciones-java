@@ -1,7 +1,11 @@
-// IllegalArgumentException y IllegalStateException son dos excepciones
-// importantes que el desarrollador de Java debería utilizar. En general
-// cuando tenga sentido, utilice una excepción estándar en lugar de 
-// crear la suya propia.
+/**
+ *  IllegalArgumentException y IllegalStateException son dos excepciones
+ * importantes que el desarrollador de Java debería utilizar. En 
+ * general cuando tenga sentido, utilice una excepción estándar en 
+ * lugar de crear la suya propia.
+ * @author Martin
+ * @version 1.0
+ */
 		
 public abstract class Cuenta {
 	private int numero;
@@ -27,6 +31,12 @@ public abstract class Cuenta {
 		cuenta.depositar(valor);
 	}
 
+	/**
+	 *  Metodo para ratirar saldo de una cuenta
+	 * @param valor candidad a retirar
+	 * @throws SaldoInsuficienteException si el valor que se quiere
+	 * retirar es mayor al saldo disponible se produce esta exepcion.
+	 */
 	public void retirar(double valor) throws SaldoInsuficienteException {
 
 		if (this.saldo < valor) {

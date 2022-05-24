@@ -6,11 +6,17 @@
 public class TestCuentaExcepcionChecked {
 
 	public static void main(String[] args) {
-
+		/**
+		 * En esta CuentaCorriente se cobra una comision por retirar dinero
+		 * Si no hay saldo suficiente para el retiro deseado mas la comision
+		 * no se puede hacer el retiro.
+		 * @author Martin
+		 * @version 1.0
+		 */
 		CuentaCorriente cuenta = new CuentaCorriente(1, 200);
 
 		try {
-			cuenta.retirar(300);
+			cuenta.retirar(200);
 		} catch (SaldoInsuficienteException e) {
 			e.printStackTrace();
 		}
